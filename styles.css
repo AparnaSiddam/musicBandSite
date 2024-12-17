@@ -1,0 +1,545 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    overflow-x: hidden;
+}
+
+.navBar{
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navBar a{
+    display: block;
+    float: left;
+    padding: 14px 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.navBar a:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .drop-btn{
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: #fff;
+    font-size: 17px;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 14px 18px;
+}
+
+.dropdown .drop-btn:hover{
+    color: #000;
+    }
+
+.dropdown-content{
+    position: absolute;
+    background-color: #fff;
+    max-width: 180px;
+    text-align: left;
+    z-index: 1;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.dropdown-content a{
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: #000;
+}
+
+.dropdown-content a:hover{
+   background-color: #000;
+   color: #fff;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown:hover .drop-btn{
+    background-color: #ccc;
+}
+
+
+.navBar .search{
+    float: right;
+}
+
+.navBar .bar{
+    display: none;
+}
+
+
+
+/* showcase */
+
+.showcase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.showcase img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.showcase .city{
+    position: relative;
+    bottom: 100px;
+    font-size: 30px;
+}
+
+.showcase .greet{
+    position: relative;
+    bottom: 80px;
+    font-size: 20px;
+}
+
+/* band */
+
+.band{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.band h1{
+    margin: 20px 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 28px;
+    letter-spacing: 0.2em;
+}
+.band .message{
+    color: #aaa;
+    font-style: italic;
+}
+.band .disp{
+    text-align: justify;
+    margin: 20px 0;
+} 
+
+.slides{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.slides .name{
+    margin: 0px 0px 10px  0px;
+}
+
+.slides img{
+    border-radius: 10px;
+}
+
+/* BuyTickets */
+
+.darkBck{
+    background-color: #000;
+    padding: 20px 0px 60px 0px;
+}
+
+.darkBck .container .band h1{
+    color: #fff;
+}
+
+.darkBck .container .band .card{
+    background-color: #fff;
+    min-width: 56vw;
+    margin-top: 40px;
+    position: relative;
+}
+
+.darkBck .container .band .card .cardItem{
+    padding: 10px;
+    border-bottom: solid 1px #ccc;
+}
+
+.darkBck .container .band .card .cardItem .sold1{
+    padding: 5px 10px;
+   background-color: red;
+   color: #fff;
+   position: absolute;
+   left: 100px;
+   top: 5px;
+}
+.darkBck .container .band .card .cardItem .sold2{
+    padding: 5px 10px;
+   background-color: red;
+   color: #fff;
+   position: absolute;
+   left: 90px;
+   top: 45px;
+}
+
+
+.darkBck .container .band .card .cardItem .num{
+    padding: 5px 10px;
+   background-color: #000;
+   color: #fff;
+   border-radius: 50%;
+   position: absolute;
+   right: 50px;
+   bottom: 5px;
+}
+
+.darkBck .container .slidesT{
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.darkBck .container .slidesT .slide{
+    background-color: #fff;
+}
+.darkBck .container .slidesT .slide img{
+    opacity: 0.8;
+}
+
+.darkBck .container .slidesT .slide img:hover{
+    opacity: 1;
+}
+
+.darkBck .container .slidesT .slide .details{
+    margin: 10px;
+}
+
+.cityName{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.date{
+    margin-top: 15px;
+    color: #aaa;
+}
+.text{
+    margin-top: 15px;
+}
+
+.darkBck .container .slidesT .slide .details button{
+    background-color: #000;
+    color: #fff;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+/* Overlay */
+
+.overlay{
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    right: 0;
+    z-index: 1;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+/* TicketForm */
+.buyTickets{
+   background-color: #eee;
+   width: 0vw;
+   position: fixed;
+   z-index: 1;
+   margin-top: 0px;
+   left: 50%;
+   top: 50%;
+   overflow: auto;
+   transform: translate(-50%, -50%);
+   transition: margin-top 0.5s ease;
+  
+ 
+}
+
+.buyTickets .ticketHeader{
+    background-color: rgb(5, 154, 147);
+    color: #fff;
+    position: relative;
+    text-align: center;
+    padding: 30px 10px;
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+}
+
+.buyTickets .ticketHeader .close{
+    font-size: 20px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+}
+
+.buyTickets .ticketHeader .close:hover{
+    font-size: 20px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: #aaa;
+    color: #000;
+     padding: 10px;
+}
+
+.buyTickets .ticketForm{
+    margin: 10px;
+}
+.buyTickets .ticketForm label{
+    line-height: 3;
+}
+.buyTickets .ticketForm input{
+ display: block;
+ min-width: 100%;
+ padding: 10px 5px;
+ border: 1px solid;
+ 
+}
+
+.buyTickets .ticketForm button.payment{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: rgb(5, 154, 147);
+    color: #fff;
+    font-size: 15px;
+}
+
+.buyTickets .ticketForm button.payment:hover{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: #aaa;
+    color: #000;
+    font-size: 15px;
+}
+
+.buyTickets .ticketClose{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.buyTickets .ticketClose button{
+    background-color: rgb(213, 6, 6);
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+.buyTickets .ticketClose button:hover{
+    background-color: #ccc;
+    border: none;
+    padding: 10px 15px;
+    color: #000;
+}
+
+
+.buyTickets .ticketClose a{
+    color: rgb(5, 154, 147);
+}
+
+/* Contact */
+
+.contact{
+    min-width: 56vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+}
+
+.contact ul{
+    list-style-type: none;
+}
+.contact ul li{
+    margin-top: 10px;
+}
+.contact ul li .space{
+    padding-right: 10px;
+}
+
+.contact form .inPut {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.contact form .inPut input, .contact form .textArea input{
+    padding: 5px;
+    border: 1px solid;
+    
+}
+
+.contact form .textArea {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.contact button{
+    margin-top: 10px;
+    float: right;
+    border: none;
+    padding: 10px 18px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.contact button:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+/* map */
+
+.map img{
+    width: 100vw;
+}
+
+/* footer */
+
+footer .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 10px;
+    font-size: 25px;
+    color: #777;
+}
+
+/* MediaQueries */
+
+@media screen and (max-width: 900px){
+    .navBar a:not(:first-child), .dropdown{
+        display: none;
+    }
+    
+    .navBar a.bar{
+        display: block;
+        float: right;
+    }
+
+    .navBar.responsive a{
+        display: block;
+        float: none;
+        text-align: left;
+    }
+
+    .navBar.responsive .dropdown{
+        float: none;
+        display: block;
+    }
+
+    .navBar.responsive .dropdown .drop-btn{
+        width: 100%;
+        text-align: left;
+    }
+    .navBar.responsive .dropdown-content{
+        position: relative;
+    }
+
+    .navBar.responsive .dropdown-content{
+        display: block;
+        max-width: 100%;
+    }
+
+    .navBar.responsive a.bar{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .navBar.responsive a.search{
+        display: none;
+    }
+
+    .showcase .city, .showcase .greet{
+        display: none;
+    }
+
+    .slides{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .darkBck .container .slidesT{
+        margin-top: 30px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        min-width: 90vw;
+    }
+    
+    .contact{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
+        min-width: 90vw;
+    }
+
+    .contact .cForm{
+        margin-top: 20px;
+    }
+
+    .contact form .inPut {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+    
+    .darkBck .container .band .card{
+        background-color: #fff;
+        min-width: 90vw;
+        margin-top: 40px;
+        position: relative;
+    }
+        
+}
